@@ -1,0 +1,434 @@
+
+/* GENERAL */
+ /*MIRAR AMB IMAC les queries */
+
+ * {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+}
+::selection {
+  background: #FAE03C; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #FAE03C; /* Gecko Browsers */
+}
+/* Scroll Positions */
+.scroller {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  color: white;
+  display:flex;
+}
+.scroller .left {
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  /*ALternative at 50.2%*/
+  transition: all .7s;
+
+
+
+}
+.scroller .right {
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  left: 50%;
+  transition: all .7s;
+
+}
+
+
+
+
+/* DOTS Menu */
+
+.dotstyle{
+  background-color: transparent;
+  color: black;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.dotstyle ul {
+  background-color: transparent;
+}
+
+.dotstyle li {
+  position: relative;
+  display: block;
+  margin: 20px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+.dotstyle li a {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 50%;
+  background-color: #fff;
+  background-color: rgba(157,164,200,0.5);
+  cursor: pointer; /* make the text accessible to screen readers */
+  position: absolute;
+  -webkit-transition: background-color 0.7s ease;
+  transition: background-color 0.7s ease;
+}
+
+.dotstyle li a:hover,
+.dotstyle li a:focus,
+.dotstyle li.current a {
+  background-color: rgba(157,164,200,1);
+}
+
+
+
+/* CSS TO CENTER THE EXAMPLES */
+.left .page {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.right .page {
+  padding-left: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* CSS FOR THE EXAMPLES */
+
+/* SLIDE 1 */
+.left .page-1{
+  background-image: linear-gradient(90deg, #f7ed56, #6D9864);
+}
+
+.right .page-1{
+  background-image: linear-gradient(90deg, #6D9864, #005470);
+}
+.left .page-1 .title{
+  /*padding-right: 0.3%;*/
+}
+@media only screen and (min-width : 320px) {
+  .left .page-1 .title,
+  .right .page-1 .title{
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 2em;
+
+
+  }
+   .left .page-1 .content,
+  .right .page-1 .content{
+    font-size: 0.9em;
+    font-weight: 100;
+    line-height: 2em;
+  }
+  .dotstyle li {
+    width: 10px;
+    height: 10px;
+    margin: 10% 20px;
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  .left .page-1 .title,
+  .right .page-1 .title{
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+   .left .page-1 .content,
+  .right .page-1 .content{
+    font-size: 2.2em;
+    font-weight: 100;
+  }
+  .dotstyle li {
+    width: 15px;
+    height: 15px;
+    margin: 20% 40px;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .left .page-1 .title,
+  .right .page-1 .title{
+    font-size: 3.125em;
+  }
+   .left .page-1 .content,
+  .right .page-1 .content{
+    font-size: 3.125em;
+  }
+}
+@media only screen and (min-width : 1200px) {
+  .left .page-1 .title,
+  .right .page-1 .title{
+    font-size: 3.750em;
+  }
+   .left .page-1 .content,
+  .right .page-1 .content{
+    font-size: 3.740em;
+  }
+}
+
+/*SLIDE 2*/
+
+ .left .page-2{
+  background-image: url('/assets/images/jelly-left.png');
+  background-size: cover;
+  background-position: right bottom;
+}
+.right .page-2{
+  background-image: url('/assets/images/jelly-right.png');
+  background-size: cover;
+  background-position: left bottom;
+
+ }
+@media only screen and (min-width : 320px) {
+  .page-2 .left{
+   width: 50.5%;   /*Fixing the error or 50/50 page*/
+  }
+  .left .page-2{
+   background-size: 275% 125%;
+    background-position: 100% 100%;
+  }
+  .left .page-2 .title{
+    font-size: 3.438em;
+    font-weight: 800;
+    padding-top: 4.5em;
+    margin-right: -15px;
+    line-height: 2.16em;
+  }
+  .left .page-2 .content,
+  .right .page-2 .content{
+    font-size: 0.875em;
+    font-weight: 100;
+    padding-right: 0.4%;
+  }
+  .right .page-2{
+    background-size: 275% 125%;
+    background-position: 0% 100%;
+   }
+   .right .page-2 .title{
+    font-size: 3.438em;
+    font-weight: 800;
+    padding-top: 5em;
+    margin-left: -15px;
+  }
+}
+@media only screen and (min-width : 320px) and (orientation: landscape) {
+
+  .left .page-2,
+  .right .page-2{
+   background-size: 130% 175%;
+   background-position: 100% 85%;
+  }
+
+  .right .page-2{
+   background-size: 130% 175%;
+   background-position: 0% 85%;
+  }
+  .left .page-2 .title{
+    padding-top: 2.5em;
+  }
+  .right .page-2 .title{
+    padding-top: 3em;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .page-2 .left{
+   width: 50.27%;   /*Fixing the error or 50/50 page*/
+  }
+  .left .page-2{
+   background-size: 200% 125%;
+   background-position: 100% 100%;
+  }
+  .left .page-2 .title{
+    padding-top: 4.5em;
+    font-size: 6.750em;
+    margin-right: -28px;
+    line-height: 2.13em;
+  }
+  .left .page-2 .content{
+    font-size: 1.875em;
+  }
+  .right .page-2{
+   background-size: 200% 125%;
+   background-position: 0% 100%;
+   }
+  .right .page-2 .title{
+    padding-top: 5em;
+    font-size: 6.750em;
+    margin-left: -28px;
+  }
+  .right .page-2 .content{
+    font-size: 1.875em;
+  }
+}
+
+@media only screen and (min-width : 768px) and (orientation: landscape){
+  .left .page-2,
+  .right .page-2{
+    background-size: 140% 140%;
+
+  }
+  .left .page-2 .title{
+    line-height: 2.12em;
+  }
+
+}
+
+@media only screen and (min-width : 992px) {
+   .page-2 .left{
+    width: 50.2%;
+   }
+   .left .page-2{
+   background-size: 125% 140%;
+   background-position: 100% 90%;
+  }
+  .left .page-2 .title{
+    padding-top: 2.5em;
+    font-size: 8.500em;
+    font-weight: 900;
+    margin-right: -38px;
+    line-height: 2.11em;
+  }
+  .left .page-2 .content{
+    font-size: 2.313em;
+  }
+  .right .page-2{
+   background-size: 125% 140%;
+   background-position: 0% 90%;
+   }
+  .right .page-2 .title{
+    padding-top: 3em;
+    font-size: 8.500em;
+    font-weight: 900;
+    margin-left: -38px;
+  }
+  .right .page-2 .content{
+    font-size: 2.313em;
+  }
+}
+ @media only screen and (min-width : 1200px) {
+
+ }
+
+
+/* SLIDE 3*/
+
+.left .page-3{
+  background-image: url('/assets/images/build-left.png');
+  background-color: #f7f7f7;
+}
+.right .page-3{
+  background-image: url('/assets/images/build-right.png');
+  background-color: #f7f7f7;
+}
+ .left .page-3 {
+  text-align: right;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+
+@media only screen and (min-width : 320px) {
+  .page-3 .left{
+    width: 50.37% ;
+  }
+  .left .page-3{
+   background-size: 65% 65%;
+   background-position: bottom right;
+   background-repeat: no-repeat;
+  }
+  .left .page-3 .title{
+    color:#4a4a4a;
+    font-size: 0.75em;
+    font-weight: 100;
+    padding-top: 15%;
+    padding-right: 10px;
+    margin-bottom: -5%;
+
+  }
+  .left .page-3 .content{
+    color:#4a4a4a;
+    font-size: 1.41em;
+    font-weight: 900;
+    padding-right: 10px;
+
+  }
+  .right .page-3{
+   background-size: 65% 65%;
+   background-position: bottom left;
+   background-repeat: no-repeat;
+  }
+
+}
+@media only screen and (min-width : 320px) and (orientation: landscape) {
+  .left .page-3,
+  .right .page-3{
+     background-size: 35% 65%;
+  }
+  .left .page-3 .title,
+  .left .page-3 .content{
+    padding-right: 10px;
+  }
+
+}
+@media only screen and (min-width : 768px) {
+  .left .page-3 .title{
+    font-size: 1.875em;
+    padding-right: 20px;
+  }
+  .left .page-3 .content{
+    font-size: 3.5em;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .left .page-3{
+    text-align: left;
+    padding-left: 10%;
+  }
+  .left .page-3,
+  .right .page-3{
+     background-size: 50% 100%;
+  }
+  .left .page-3 .title{
+    font-size: 2.31em;
+  }
+  .left .page-3 .content{
+    font-size: 4.37em;
+  }
+
+
+}
+
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
